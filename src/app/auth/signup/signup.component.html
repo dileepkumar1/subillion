@@ -1,0 +1,25 @@
+<nb-layout class="login-section signup">
+    <nb-layout-column class="section_card">
+          <nb-card>
+              <nb-card-body>
+                  <div class="login_fm">
+                      <h2><img src="assets/images/logo.png"></h2>
+                      
+                      <form>
+                        <input type="text" nbInput fullWidth fieldSize="medium"  placeholder="Name">
+                          <input type="text" nbInput fullWidth fieldSize="medium"  placeholder="Email or Number">
+                          <input type="text" nbInput fullWidth fieldSize="medium"   placeholder="Your Password" type="password">
+                              <div class="login_btn mt-3">
+                                  <button nbButton fullWidth  [routerLink]="['/home/dashboard']" >Sign up</button>
+                              </div>
+                              <div>
+                                <p class="forgetpassword text-st">Aready have account <a [routerLink]="['/login']"> Login</a></p>
+                             </div>
+                      </form>
+                      
+                  </div>
+                </nb-card-body>
+              
+          </nb-card>
+    </nb-layout-column>
+</nb-layout>

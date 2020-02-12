@@ -1,1 +1,317 @@
+@import 'themes';
+
+@import '~@nebular/theme/styles/globals';
+
+@include nb-install() {
+  @include nb-theme-global();
+};
 /* You can add global styles to this file, and also import other style files */
+
+//  top navigation css//
+.left{
+  margin-top: -40px;
+}
+.logo{
+  img{
+      width: 148px;
+  }
+}
+
+.top_menu{
+  width: 100%;
+  nb-actions{
+      float: right;
+      border:none !important;
+  }
+}
+
+.left-logo{
+  width: 353px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+
+
+  .nav-menu{
+      margin-right: 20px;
+      border-right: 2px solid rgba(255, 255, 255, 0.2);
+      padding-right: 10px;
+      margin-top: 21px;
+        
+      nb-icon{
+          
+          height: 30px;
+          width: 30px;
+      }
+  }
+
+}
+.navbar-brand{
+  display: block;
+  text-decoration: none;
+
+  .logo{
+      font-size: 20px;
+      // color: white;
+      font-weight: 700;
+      width: 321px;
+      text-transform: uppercase;
+      list-style-type: none;
+      text-decoration: none
+  }
+
+}
+
+
+.nb-theme-default nb-layout-header nav, .nb-theme-default nb-sidebar{
+  box-shadow: none;
+}
+
+
+
+.top_menu{
+  text-align: right;
+
+  a{
+    margin: 0px 9px;
+  }
+}
+
+
+// login section//
+
+.login-section{
+  // padding-top: 184px;
+
+  .section_card{
+      // height: 7vh;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+  }
+  nb-card{
+      max-width: 500px;
+      margin: auto;
+      /* height: 447px !important; */
+      /* margin-top: 124px; */
+      padding: 28px;
+  }
+  .login_fm{
+      margin: auto;
+      width: 100%;
+      max-width:400px;
+      text-align: center;
+
+      h2{
+          margin-bottom:12px;
+          text-transform: uppercase;
+          color: #5a5761;
+
+          img{
+              width: 215px;
+          }
+      }
+  }
+  form{
+      input{
+          margin-top: 8px;
+          margin-bottom: 15px;
+      }
+
+      &:after{
+          display: block;
+          content: "";
+          clear: both;
+          height: 0px;
+      }
+      .mrtop{
+          margin-bottom: 20px;
+      }
+
+      .forgetpassword{
+         margin-bottom: 0px;
+         margin-top:4px;
+      }
+      nb-checkbox{
+          float:left;
+      }
+
+      .login_btn{
+          line-height: 0px;
+          width: 100%;
+          display: block;
+          float: right;
+          margin-top: 10px;
+          &:after{
+              display: block;
+              content: "";
+              clear: both;
+              height: 0px;
+          }
+
+          a{
+            display: block;
+            margin-bottom: 10px;
+          }
+          button{
+              float: right;
+              margin-top: 19px;
+              padding: 10px 28px;
+
+              &:focus{
+                  outline: none;
+              }
+          }
+      }
+  }
+
+ 
+}
+
+.signup{
+  .text-st{
+  float:inherit !important;
+  text-align: center !important;
+  margin-top: 16px !important;
+  }
+
+  form .login_btn {
+    float: inherit !important;
+  }
+}
+
+.forget-text{
+    text-align: left;
+    font-size: 13px;
+    color: #2d2c2c;
+}
+
+.list-view-set{
+   img{
+     width: 100%;
+   }
+}
+
+.post-wrapper{
+  padding: 10px;
+   a{
+    color: #ff9c03;
+    font-size: 15px;
+   }
+
+   .post-title{
+    padding-bottom: 8px;
+    font-size: 15px;
+    border-bottom: 1px solid #cdcdce;
+   }
+
+   
+}
+.card-footer nb-icon, .card-footer .btn-sf{
+  width: 25%;
+  color: #031de0;
+  display: inline-block;
+  text-align: center;
+}
+
+.list-view-set  nb-card{
+  box-shadow:none;
+}
+
+
+.poll-details .view-dt img{
+  width: 100%;
+}
+
+.check-box-dc nb-checkbox{
+  width: 50%;
+  float: left;
+}
+
+.check-box-dc  nb-checkbox .text{
+  font-size: 15px;
+    text-transform: uppercase;
+
+}
+
+.check-box-dc nb-checkbox .samep  span{
+  background: #1e9403;
+  padding: 2px 12px;
+  border-radius: 2px;
+  color: white;
+  font-weight: 900;
+}
+
+.total-vote h4{
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 17px;
+  font-size: 21px;
+  text-align: center;
+}
+
+.text-font-lats p{
+  color: #8f9bb3;
+  font-family: Open Sans, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1rem;
+  max-width: 312px;
+  display: inline-block;
+  width: 200px;
+}
+
+.text-font-lats h5 span{
+  margin-left: 13px;
+    height: col;
+    color: #ffffff;
+    background: #198400;
+    padding: 4px 18px;
+    font-weight: 900;
+    border-radius: 3px;
+}
+
+.intpt input{
+  width: 107px !important;
+  margin-left: 75px;
+}
+
+.card-rt a{
+  text-decoration: none;
+}
+
+// media query 
+@media(max-width:991px){
+
+  .nb-theme-default nb-sidebar.expanded {
+    position: absolute;
+    z-index: 99;
+  }
+
+  .nb-theme-default nb-sidebar.expanded .main-container-fixed{
+    background: white;
+  }
+}
+@media(max-width:768px) {
+    .compacted{
+      width: 0px !important;
+      .main-container, nb-menu{
+        width: 0px !important;
+      }
+    }
+
+    .nb-theme-default nb-sidebar.expanded{
+        &:after{
+          display: block;
+          content: "";
+          clear: both;
+          height: 0px;
+        }
+    }
+
+
+}
+
+.nb-theme-default nb-layout .layout{
+  min-height: auto !important;
+}

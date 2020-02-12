@@ -1,0 +1,161 @@
+<div class="conatiner-fluid poll-details">
+    <div class="row">
+        <div class="col-md-7">
+          <nb-card>
+            <nb-card-body>
+              <nb-card-header>CHART VIEW</nb-card-header>
+              <div style="display: block">
+                <canvas baseChart
+                  [datasets]="barChartData"
+                  [labels]="barChartLabels"
+                  [options]="barChartOptions"
+                  [plugins]="barChartPlugins"
+                  [legend]="barChartLegend"
+                  [chartType]="barChartType">
+                </canvas>
+              </div>            
+            </nb-card-body>
+          </nb-card>
+        </div>
+        <div class="col-md-5">
+          <nb-card>
+            <nb-card-header>YOUR DETAILS</nb-card-header>
+            <nb-card-body>
+              <form>
+                <div class="text-font-lats"> <p>Your balance: </p><span>40</span></div>
+                <div class="text-font-lats"> <p>Quantity of stocks You Possess: </p><span>40</span></div>
+                <div class="text-font-lats"> <p>You have not bid for any option:</p></div>
+                <div class="form-group row">
+                    <label for="inputEmail1" class="label col-sm-3 col-form-label">Quantity</label>
+                    <div class="col-sm-9 intpt">
+                      <input type="email" nbInput fullWidth id="inputEmail1" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputPassword2" class="label col-sm-3 col-form-label">Total Price</label>
+                  <div class="col-sm-9 intpt">
+                    <input type="password" nbInput fullWidth id="inputPassword2" placeholder="100">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-md-12 text-center">
+                    <button type="submit" nbButton status="primary">Buy Poll</button>
+                  </div>
+                </div>
+              </form>
+            </nb-card-body>
+          </nb-card>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-7">
+           <nb-card style="padding: 0px;">
+            <nb-card-header>TOP 10 PROFIT MAKER</nb-card-header>
+             <nb-card-body style="padding: 0px;">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">TRADER NAME</th>
+                    <th scope="col">QUANTITY TRADED</th>
+                    <th scope="col">PROFIT EARNED</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Power Play</td>
+                    <td>200$</td>
+                    <td>100$</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Game</td>
+                    <td>200$</td>
+                    <td>100$</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Power Play</td>
+                    <td>200$</td>
+                    <td>100$</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Game</td>
+                    <td>200$</td>
+                    <td>100$</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>Power Play</td>
+                    <td>200$</td>
+                    <td>100$</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>Game</td>
+                    <td>200$</td>
+                    <td>100$</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>Power Play</td>
+                    <td>200$</td>
+                    <td>100$</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>Game</td>
+                    <td>200$</td>
+                    <td>100$</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>Power Play</td>
+                    <td>200$</td>
+                    <td>100$</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td>Game</td>
+                    <td>200$</td>
+                    <td>100$</td>
+                  </tr>
+                </tbody>
+              </table>
+             </nb-card-body>
+           </nb-card>
+        </div>
+        <div class="col-md-5 view-dt">
+          <div> <img src="https://quixlab.com/demo/tradix/images/blog/2.jpg"></div>
+          <nb-card> 
+              <nb-card-header>April 25, 2018 4 Comments ApartmentsReal Estate near oceanLorem.</nb-card-header>
+              <nb-card-body>
+                <div class="total-vote"> <h4> Total Vote <span> 45</span></h4></div>
+                <div class="text-center check-box-dc">
+                  <nb-checkbox status="basic"><span class="samep">Yes price <span>20$</span></span></nb-checkbox>
+                  <nb-checkbox status="primary"><span class="samep">No price <span>30$</span></span></nb-checkbox>
+                </div>
+              </nb-card-body>
+              <nb-card-footer class="card-footer">
+                  <div class="btn-sf" nbPopover="Poll Vote" nbPopoverTrigger="hover" nbPopoverPlacement="top">
+                      <nb-icon icon="trending-up-outline" ></nb-icon>
+                  </div>
+
+                  <div class="btn-sf" nbPopover="Like" nbPopoverTrigger="hover" nbPopoverPlacement="top">
+                      <nb-icon icon="heart-outline" ></nb-icon>
+                  </div>
+
+                  <div class="btn-sf" nbPopover="share" nbPopoverTrigger="hover" nbPopoverPlacement="top">
+                      <nb-icon icon="share-outline" ></nb-icon>
+                  </div>
+
+                  <div class="btn-sf" nbPopover="comments" nbPopoverTrigger="hover" nbPopoverPlacement="top">
+                      <nb-icon icon="message-circle-outline" ></nb-icon>
+                  </div>
+              </nb-card-footer>
+            </nb-card>
+      </div>
+    </div>
+</div>

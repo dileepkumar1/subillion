@@ -1,0 +1,33 @@
+<nb-layout class="login-section">
+    <nb-layout-column class="section_card">
+          <nb-card>
+              <nb-card-body>
+                  <div class="login_fm">
+                      <h2><a [routerLink]="['/home/dashboard']" ><img src="assets/images/logo.png"></a></h2>
+                        <!-- {{loginUserData | json}} -->
+                      <form>
+                          <input nbInput fullWidth fieldSize="medium"  placeholder="Email Address" [(ngModel)]="loginUserData.email" name="email">
+                          <input nbInput fullWidth fieldSize="medium"   placeholder="Your Password" type="password" [(ngModel)]="loginUserData.password" name="password">
+                          
+                              <div>
+                                      <nb-checkbox class="example-margin" >Remenber Me</nb-checkbox>
+                                      <p class="forgetpassword"><a [routerLink]="['/home/forget-password']">Forget password</a></p>
+                              </div>
+                              <div class="login_btn mt-3">
+                                  <button nbButton fullWidth (click)="loginUser()" type="submit" >Login</button>
+                              </div>
+
+                              <div>
+                                <p class="forgetpassword text-st">Don't have account?<a [routerLink]="['/home/signup']">Signup</a></p>
+                             </div>
+                      </form>
+                      
+                  </div>
+                </nb-card-body>
+              
+          </nb-card>
+
+          <button (click)="fromase64()" type="submit" class="btn btn-primary">fromase64</button>
+          <button (click)="Tobase64()" type="submit" class="btn btn-primary">tobase</button>
+    </nb-layout-column>
+</nb-layout>
