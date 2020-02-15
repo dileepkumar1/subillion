@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import{AuthService} from '../login/../../services/auth.service'
 import{Router} from '@angular/router'
+import{HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -9,34 +10,36 @@ import{Router} from '@angular/router'
 })
 export class LoginComponent implements OnInit {
   
-  loginUserData:string=JSON.stringify({id:101,name:"demo"})
+  // loginUserData={}
+
   
-  base64str:string="";
 
   constructor(private _auth:AuthService,
-              private _router:Router) { }
+              private _router:Router,private http: HttpClient,) { }
 
-  ngOnInit() {
-  }
-  Tobase64(){
-    this.base64str=btoa(this.loginUserData);
-    alert(this.base64str)
-  }
-  fromase64(){
-    this.loginUserData=atob(this.base64str);
-    alert("yyuyuy" + this.loginUserData)
-  }
-  loginUser(){
-    
-    console.log(this.loginUserData)
-    this._auth.loginUser(this.loginUserData).subscribe(
+  ngOnInit() { }
+
+  loginUser(username, password){
+    let jsondata = {
+      'email': username,
+      'password': password
+    };
+    let baseencoded = btoa(JSON.stringify(jsondata));
+    // console.log(baseencoded);
+    let headers = new Headers();
+    headers.append("Accept", "q=0.8;application/json;q=0.9");
+    headers.append("Access-Control-Allow-Methods","GET, POST");
+    headers.append("Access-Control-Allow-Origin","*");
+    this.http.post<any>('http://www.subillion.com/api/user/login', {"token":String(baseencoded)})
+    .subscribe(
       res => {
           console.log(res)
           localStorage.setItem('access', res.access)
           this._router.navigate(['/event'])
       },
-      err => console.log(err)
+      err => {
+        console.log("dileep")
+      }
     )
-    console.log(this.loginUserData)
   }
 }

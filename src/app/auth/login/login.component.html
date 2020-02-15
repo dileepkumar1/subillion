@@ -6,8 +6,8 @@
                       <h2><a [routerLink]="['/home/dashboard']" ><img src="assets/images/logo.png"></a></h2>
                         <!-- {{loginUserData | json}} -->
                       <form>
-                          <input nbInput fullWidth fieldSize="medium"  placeholder="Email Address" [(ngModel)]="loginUserData.email" name="email">
-                          <input nbInput fullWidth fieldSize="medium"   placeholder="Your Password" type="password" [(ngModel)]="loginUserData.password" name="password">
+                          <input nbInput fullWidth fieldSize="medium"  placeholder="Email Address"  name="email">
+                          <input nbInput fullWidth fieldSize="medium"   placeholder="Your Password" type="password"  name="password">
                           
                               <div>
                                       <nb-checkbox class="example-margin" >Remenber Me</nb-checkbox>
@@ -25,9 +25,6 @@
                   </div>
                 </nb-card-body>
               
-          </nb-card>
-
-          <button (click)="fromase64()" type="submit" class="btn btn-primary">fromase64</button>
-          <button (click)="Tobase64()" type="submit" class="btn btn-primary">tobase</button>
+            </nb-card>
     </nb-layout-column>
 </nb-layout>
